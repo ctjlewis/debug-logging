@@ -13,3 +13,5 @@ export const debugLog = (...msgs: unknown[]) => {
     DEBUG.log(...msgs);
   }
 };
+
+export * from "./debugLogger";

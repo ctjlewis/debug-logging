@@ -1,4 +1,8 @@
-let env: { [key: string]: unknown } = {
+/**
+ * Env is PRODUCTION by default. Will be overwritten with existing process.env
+ * if it exists.
+ */
+let env: NodeJS.ProcessEnv = {
   NODE_ENV: "production",
 };
 

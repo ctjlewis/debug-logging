@@ -23,14 +23,14 @@ export const createDebugLogger = (fn: Function) => {
     const { name } = fn;
     return {
       log(...msgs: unknown[]) {
-        const fnLabel = chalk.bgBlueBright.white(` [${name}] `);
+        const fnLabel = chalk.bgBlue.white(` [${name}] `);
         debugConsole.log(`${fnLabel}`, ...msgs);
         debugConsole.log();
       },
 
       group() {
         debugConsole.log();
-        const fnLabel = chalk.bgBlueBright.white(`[${name}]`);
+        const fnLabel = chalk.bgBlue.white(` [${name}] `);
         debugConsole.group(fnLabel);
         debugConsole.log();
       },

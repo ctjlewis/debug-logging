@@ -2,7 +2,7 @@
  * Env is PRODUCTION by default. Will be overwritten with existing process.env
  * if it exists.
  */
-let env: NodeJS.ProcessEnv = {
+const env: NodeJS.ProcessEnv = {
   NODE_ENV: "production",
 };
 
@@ -12,7 +12,10 @@ let env: NodeJS.ProcessEnv = {
  */
 try {
   const { env: processEnv } = await import("process");
-  env = processEnv;
+  if (processEnv.NODE_ENV) {
+    // console.log("Found NODE_ENV override", processEnv.NODE_ENV);
+    env.NODE_ENV = processEnv.NODE_ENV;
+  }
 } catch (e) {}
 
 export const PRODUCTION = env.NODE_ENV === "production";

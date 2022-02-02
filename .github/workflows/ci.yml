@@ -24,7 +24,7 @@ jobs:
         node-version: ${{ matrix.nodejs }}
 
     - name: Install TSM
-      run: yarn global add @tsmodule/tsm && yarn link @tsmodule/tsm
+      run: yarn global add @tsmodule/tsm
 
     - name: Install and link
       run: yarn install --frozen-lockfile && yarn build && yarn link

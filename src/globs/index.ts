@@ -18,4 +18,4 @@ try {
   }
 } catch (e) {}
 
-export const PRODUCTION = env.NODE_ENV === "production";
+export const DEVELOPMENT = env.NODE_ENV === "development";

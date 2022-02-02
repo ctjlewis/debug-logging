@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { PRODUCTION } from "./globs";
+import { DEVELOPMENT } from "./globs";
 import { createDebugLogger } from "./debugLogger";
 
 export const log = (...msgs: unknown[]) => {
@@ -10,7 +10,7 @@ export const log = (...msgs: unknown[]) => {
 
 export const debugLog = (...msgs: unknown[]) => {
   const DEBUG = createDebugLogger(debugLog);
-  if (!PRODUCTION) {
+  if (DEVELOPMENT) {
     DEBUG.log(...msgs);
   }
 };

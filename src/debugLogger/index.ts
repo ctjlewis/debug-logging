@@ -1,5 +1,5 @@
 import { Console } from "console";
-import { PRODUCTION } from "../globs";
+import { DEVELOPMENT } from "../globs";
 import chalk from "chalk";
 
 export const debugConsole = new Console({
@@ -10,7 +10,7 @@ export const debugConsole = new Console({
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 export const createDebugLogger = (fn: Function) => {
-  if (PRODUCTION) {
+  if (!DEVELOPMENT) {
     /**
      * Dead path, should get removed after AST compilation.
      */
@@ -23,15 +23,16 @@ export const createDebugLogger = (fn: Function) => {
     const { name } = fn;
     return {
       log(...msgs: unknown[]) {
-        const fnLabel = chalk.bgBlueBright.black(`[${name}]`);
+        const fnLabel = chalk.bgBlueBright.white(` [${name}] `);
         debugConsole.log(`${fnLabel}`, ...msgs);
         debugConsole.log();
       },
 
       group() {
-        debugConsole.log("\n");
-        const fnLabel = chalk.bgBlueBright.black(`[${name}]`);
+        debugConsole.log();
+        const fnLabel = chalk.bgBlueBright.white(`[${name}]`);
         debugConsole.group(fnLabel);
+        debugConsole.log();
       },
 
       groupEnd() {

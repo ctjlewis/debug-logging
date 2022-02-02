@@ -5,7 +5,7 @@
     "email": "ctj.lewis@icloud.com"
   },
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "Simple debug logging.",
   "license": "MIT",
   "types": "dist/index.d.ts",
@@ -18,7 +18,6 @@
     "./*": "./dist/*/index.js"
   },
   "devDependencies": {
-    "@tsmodule/tsm": "^6.0.2",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
     "ava": "^4.0.1",
@@ -49,5 +48,8 @@
       "--no-warnings",
       "--loader=@tsmodule/tsm"
     ]
+  },
+  "peerDependencies": {
+    "@tsmodule/tsm": "^7.1.0"
   }
 }

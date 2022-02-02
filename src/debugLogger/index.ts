@@ -23,9 +23,7 @@ export const createDebugLogger = (fn: Function) => {
     const { name } = fn;
     return {
       log(...msgs: unknown[]) {
-        const debugLabel = chalk.bgWhite.gray("[DEBUG]");
-        const fnLabel = chalk.bgBlueBright.black(`[${name}]`);
-        debugConsole.log(`${debugLabel} ${fnLabel}`, ...msgs);
+        debugConsole.log(...msgs);
       },
 
       group() {

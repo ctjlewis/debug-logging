@@ -3,6 +3,7 @@ import { PRODUCTION } from "./globs";
 import { createDebugLogger } from "./debugLogger";
 
 export const log = (...msgs: unknown[]) => {
+  console.log();
   console.log(...msgs);
   console.log();
 };

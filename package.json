@@ -47,7 +47,7 @@
     },
     "nodeArguments": [
       "--no-warnings",
-      "--loader=@tsmodule/tsm"
+      "--loader=tsm"
     ]
   },
   "peerDependencies": {

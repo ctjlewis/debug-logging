@@ -4,6 +4,7 @@ import { createDebugLogger } from "./debugLogger";
 
 export const log = (...msgs: unknown[]) => {
   console.log(...msgs);
+  console.log();
 };
 
 export const debugLog = (...msgs: unknown[]) => {

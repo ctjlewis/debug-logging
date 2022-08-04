@@ -1,6 +1,6 @@
 {
   "include": [
-    "next-env.d.ts",
+    "*env.d.ts",
     "src/**/*"
   ],
   "exclude": [
@@ -12,9 +12,8 @@
     "target": "ESNext",
     "module": "ESNext",
     "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
+      "ESNext",
+      "DOM"
     ],
     "jsx": "preserve",
     "rootDir": "src",

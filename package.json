@@ -18,19 +18,20 @@
     "./*": "./dist/*/index.js"
   },
   "devDependencies": {
-    "@tsmodule/tsm": "^8.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.10.2",
-    "@typescript-eslint/parser": "^5.10.2",
-    "ava": "^4.0.1",
-    "eslint": "^8.8.0",
-    "typescript": "^4.5.5"
+    "@tsmodule/tsmodule": "^40.0.11",
+    "@types/node": "^18.6.3",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "ava": "^4.3.1",
+    "eslint": "^8.21.0",
+    "typescript": "^4.7.4"
   },
   "scripts": {
-    "build": "tsm build",
-    "prestart": "yarn build",
-    "start": "node dist/index.js",
-    "prepare": "yarn build",
+    "dev": "tsmodule dev",
+    "build": "tsmodule build",
     "test": "ava",
+    "pretest": "tsmodule build --runtime-only",
+    "prepublishOnly": "yarn build && yarn test",
     "lint": "eslint src --fix"
   },
   "dependencies": {
@@ -40,6 +41,7 @@
     "socket.io": "^4.4.0"
   },
   "ava": {
+    "timeout": "10m",
     "files": [
       "test/**/*.test.ts"
     ],
@@ -48,7 +50,8 @@
     },
     "nodeArguments": [
       "--no-warnings",
-      "--loader=@tsmodule/tsm"
+      "--loader=@tsmodule/tsmodule"
     ]
-  }
+  },
+  "platform": "node"
 }

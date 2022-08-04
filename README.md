@@ -7,7 +7,7 @@ environments only.  **Debug logs will be removed when `process.env.NODE_ENV ===
 ### Quick, devleopment-only logging
 
 ```ts
-import { debugLog } from "create-debug-logger"
+import { debugLog } from "debug-logging"
 
 debugLog("hello world");
 
@@ -18,7 +18,7 @@ debugLog("hello world");
 ### Including function name by initializing
 
 ```ts
-import { createDebugLogger } from "create-debug-logger";
+import { createDebugLogger } from "debug-logging";
 
 export const testFunction = () => {
   const DEBUG = createDebugLogger(testFunction);
@@ -32,7 +32,7 @@ export const testFunction = () => {
 ### As a class method decorator, if you want that for some reason
 
 ```ts
-import { debugMethod } from "create-debug-logger";
+import { debugMethod } from "debug-logging";
 
 class Person {
   @debugMethod

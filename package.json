@@ -5,7 +5,7 @@
     "email": "ctj.lewis@icloud.com"
   },
   "type": "module",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Simple debug logging.",
   "license": "MIT",
   "types": "dist/index.d.ts",

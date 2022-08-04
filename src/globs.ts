@@ -18,4 +18,9 @@ try {
   }
 } catch (e) {}
 
-export const DEVELOPMENT = env.NODE_ENV === "development";
+/**
+ * Whether NODE_ENV is set to "development". Browser context will always be
+ * assumed production.
+ */
+export const DEVELOPMENT =
+  typeof window === "undefined" && env.NODE_ENV === "development";

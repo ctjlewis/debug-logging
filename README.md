@@ -1,4 +1,4 @@
-# Create Debug Logger
+# Debug Logging
 
 This module provides a few ways to log to the console in development
 environments only.  **Debug logs will be removed when `process.env.NODE_ENV ===

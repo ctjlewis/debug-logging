@@ -5,7 +5,7 @@
     "email": "ctj.lewis@icloud.com"
   },
   "type": "module",
-  "version": "4.0.4",
+  "version": "4.1.0",
   "description": "Simple debug logging.",
   "license": "MIT",
   "types": "dist/index.d.ts",
@@ -18,39 +18,28 @@
     "./*": "./dist/*/index.js"
   },
   "devDependencies": {
-    "@tsmodule/tsmodule": "^40.0.11",
-    "@types/node": "^18.6.3",
-    "@typescript-eslint/eslint-plugin": "^5.32.0",
-    "@typescript-eslint/parser": "^5.32.0",
-    "ava": "^4.3.1",
-    "eslint": "^8.21.0",
-    "typescript": "^4.7.4"
+    "@tsmodule/tsmodule": "^41.20.0",
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
+    "ava": "^5.1.0",
+    "eslint": "^8.28.0",
+    "typescript": "^4.9.3"
   },
   "scripts": {
     "dev": "tsmodule dev",
-    "build": "tsmodule build",
-    "test": "ava",
-    "prepublishOnly": "yarn build && yarn test",
+    "build": "tsmodule build -b",
+    "test": "tsmodule test.ts",
+    "pretest": "yarn build",
+    "prepublishOnly": "yarn test",
     "lint": "eslint src --fix"
   },
   "dependencies": {
     "chalk": "^5.0.0",
-    "console": "^0.7.2",
-    "node-fetch": "^3.2.0",
-    "socket.io": "^4.4.0"
+    "console": "^0.7.2"
   },
-  "ava": {
-    "timeout": "10m",
-    "files": [
-      "test/**/*.test.ts"
-    ],
-    "extensions": {
-      "ts": "module"
-    },
-    "nodeArguments": [
-      "--no-warnings",
-      "--loader=@tsmodule/tsmodule"
-    ]
-  },
-  "platform": "node"
+  "platform": "node",
+  "engines": {
+    "node": ">=14"
+  }
 }

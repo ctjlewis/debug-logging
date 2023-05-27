@@ -1,8 +1,15 @@
 import { DEVELOPMENT } from "../globs";
 import { style } from "@tsmodule/log";
 
+export interface DebugLogger {
+  log(...msgs: unknown[]): void;
+  table(...msgs: unknown[]): void;
+  group(): void;
+  groupEnd(): void;
+}
+
 // eslint-disable-next-line @typescript-eslint/ban-types
-export const createDebugLogger = (fn: Function) => {
+export const createDebugLogger = (fn: Function): DebugLogger => {
   const debugConsole = console;
 
   if (!DEVELOPMENT) {
@@ -13,6 +20,7 @@ export const createDebugLogger = (fn: Function) => {
       log() { void 0; },
       group() { void 0; },
       groupEnd() { void 0; },
+      table() { void 0; }
     };
   } else {
     const { name } = fn;

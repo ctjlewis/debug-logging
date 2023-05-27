@@ -23,6 +23,13 @@ export const createDebugLogger = (fn: Function) => {
         debugConsole.log();
       },
 
+      table(...msgs: unknown[]) {
+        const fnLabel = style(` [${name}] `, ["bgBlue", "white"]);
+        debugConsole.log(`${fnLabel}`, "\n\n");
+        debugConsole.table(...msgs);
+        debugConsole.log();
+      },
+
       group() {
         debugConsole.log();
         const fnLabel = style(` [${name}] `, ["bgBlue", "white"]);

@@ -1,9 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
-  chalk:
-    specifier: ^5.2.0
-    version: 5.2.0
+  '@tsmodule/log':
+    specifier: ^2.2.1
+    version: 2.2.1
   console:
     specifier: ^0.7.2
     version: 0.7.2
@@ -378,6 +378,11 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
     dev: true
+
+  /@tsmodule/log@2.2.1:
+    resolution: {integrity: sha512-JdnluIsDaxQkg3qvhClaXwt+E4N0Tf6OEd3oOs642JX8e8d/y1h6kExZd0hY1OBVmvhLCncB1Yi02dfdkINlbw==}
+    engines: {node: '>=14'}
+    dev: false
 
   /@tsmodule/tsmodule@44.7.0:
     resolution: {integrity: sha512-pLgPzQsoGhLhJG3Y5nAy3bdr/3JTt1NRSkwWKupix4r77QpVX9FOE97SDpVxIkn0DRMt85NhHCZHmYvIbhPzjQ==}
@@ -776,6 +781,7 @@ packages:
   /chalk@5.2.0:
     resolution: {integrity: sha512-ree3Gqw/nazQAPuJJEy+avdl7QfZMcUvmHIKgEZkGL+xOBzRvup5Hxo6LHuMceSxOabuJLJm5Yp/92R9eMmMvA==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
+    dev: true
 
   /chokidar@3.5.3:
     resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}

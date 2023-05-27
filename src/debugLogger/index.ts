@@ -1,6 +1,6 @@
 import { Console } from "console";
 import { DEVELOPMENT } from "../globs";
-import chalk from "chalk";
+import { style } from "@tsmodule/log";
 
 export const debugConsole = new Console({
   stdout: process.stdout,
@@ -23,14 +23,14 @@ export const createDebugLogger = (fn: Function) => {
     const { name } = fn;
     return {
       log(...msgs: unknown[]) {
-        const fnLabel = chalk.bgBlue.white(` [${name}] `);
+        const fnLabel = style(` [${name}] `, ["bgBlue", "white"]);
         debugConsole.log(`${fnLabel}`, "\n\n", ...msgs);
         debugConsole.log();
       },
 
       group() {
         debugConsole.log();
-        const fnLabel = chalk.bgBlue.white(` [${name}] `);
+        const fnLabel = style(` [${name}] `, ["bgBlue", "white"]);
         debugConsole.group(fnLabel);
         debugConsole.log();
       },

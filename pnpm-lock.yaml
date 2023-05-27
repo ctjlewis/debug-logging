@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@tsmodule/log':
-    specifier: ^3.0.1
-    version: 3.0.1
+    specifier: ^3.0.3
+    version: 3.0.3
   console:
     specifier: ^0.7.2
     version: 0.7.2
@@ -379,8 +379,8 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@tsmodule/log@3.0.1:
-    resolution: {integrity: sha512-X14XYwiy8l7rdktuByU0yWQKr28tILzi+CfpinmxnPZ3PiIoceJaxKDufDpdMq/grp5esGI9meucturbWkVfHg==}
+  /@tsmodule/log@3.0.3:
+    resolution: {integrity: sha512-QZ72NvGXvHPXyR1c0/uh2juGQKMvprZ8lItxFSgMlRCOM00YTzLEn1NsigMJVhRA5cj2bLJF7jw1SlF8HsHM6w==}
     engines: {node: '>=14'}
     dev: false
 

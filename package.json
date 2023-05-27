@@ -35,7 +35,7 @@
     "lint": "eslint src --fix"
   },
   "dependencies": {
-    "@tsmodule/log": "^3.0.4"
+    "@tsmodule/log": "^3.0.5"
   },
   "platform": "node",
   "engines": {

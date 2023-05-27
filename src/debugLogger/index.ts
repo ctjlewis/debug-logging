@@ -1,15 +1,10 @@
-import { Console } from "console";
 import { DEVELOPMENT } from "../globs";
 import { style } from "@tsmodule/log";
 
-export const debugConsole = new Console({
-  stdout: process.stdout,
-  stderr: process.stderr,
-  groupIndentation: 4,
-});
-
 // eslint-disable-next-line @typescript-eslint/ban-types
 export const createDebugLogger = (fn: Function) => {
+  const debugConsole = console;
+
   if (!DEVELOPMENT) {
     /**
      * Dead path, should get removed after AST compilation.

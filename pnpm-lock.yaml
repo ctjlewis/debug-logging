@@ -4,9 +4,6 @@ dependencies:
   '@tsmodule/log':
     specifier: ^3.0.3
     version: 3.0.3
-  console:
-    specifier: ^0.7.2
-    version: 0.7.2
 
 devDependencies:
   '@tsmodule/tsmodule':
@@ -891,10 +888,6 @@ packages:
       semver: 7.5.1
       well-known-symbols: 2.0.0
     dev: true
-
-  /console@0.7.2:
-    resolution: {integrity: sha512-+JSDwGunA4MTEgAV/4VBKwUHonP8CzJ/6GIuwPi6acKFqFfHUdSGCm89ZxZ5FfGWdZfkdgAroy5bJ5FSeN/t4g==}
-    dev: false
 
   /convert-to-spaces@2.0.1:
     resolution: {integrity: sha512-rcQ1bsQO9799wq24uE5AM2tAILy4gXGIK/njFWcVQkGNZ96edlpY+A7bjwvzjYvLDyzmG1MmMLZhpcsb+klNMQ==}
